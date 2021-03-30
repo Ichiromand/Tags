@@ -18,11 +18,13 @@ fieldInput.onclick = function(){
         fieldInput.classList.add('on')
         
         buttonAdd.addEventListener('click', function(){
-            let listTag = document.createElement('li');
-            listTag.className = 'list__tag';
-            list.appendChild(listTag);
-            listTag.textContent = fieldInput.value;
-            fieldInput.value = '';
+            if(fieldInput.value !== ''){
+                let listTag = document.createElement('li');
+                listTag.className = 'list__tag';
+                list.appendChild(listTag);
+                listTag.textContent = fieldInput.value;
+                fieldInput.value = '';
+            }
         })
         
         buttonCancel.addEventListener('click', function(){
