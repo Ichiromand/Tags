@@ -1,0 +1,81 @@
+body {
+    background: #E5E5E5;
+    font-family: Open Sans;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.field {
+    width: 100%;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.field__input {
+    margin: 20px 40px;
+    border: none;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.field__input::-webkit-input-placeholder {color: rgba(51, 51, 51, 0.4);}
+
+.field__buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.field__buttons--add {
+    margin-left: 20px;
+    padding: 8px 25px 8px 49px;
+    border: 1px solid #4296FF;
+    border-radius: 4px;
+    color: #4296FF;
+    background: url(add.png) no-repeat;
+    background-position: 25px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.field__buttons--cancel {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.list{
+    padding: 0;
+}
+
+.list__main {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: white;
+    border-radius: 4px 4px 2px 2px;
+    list-style: none;
+}
+
+.list__tag {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    font-size: 13px;
+    line-height: 18px;
+    background-color: white;
+    list-style: none;
+    border-radius: 2px;
+    margin-top: 1px;
+}
