@@ -12,9 +12,11 @@ body {
     width: 100%;
     background-color: white;
     border-radius: 4px;
+    padding-top: 15px;
+    padding-left: 40px;
 }
 
-.field__input {
+.input-field__input {
     margin: 20px 40px;
     border: none;
     font-size: 13px;
@@ -85,4 +87,14 @@ body {
     border-radius: 4px;
     padding: 5px 10px;
     margin-right: 20px;
+    align-self: center;
+}
+
+.input-field {
+    display: flex;
+}
+
+.input-field__tags {
+    display: flex;
+
 }

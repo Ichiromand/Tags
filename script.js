@@ -1,7 +1,7 @@
 let list = document.querySelector('.list');
-let fieldInput = document.querySelector('.field__input');
+let fieldInput = document.querySelector('.input-field__input');
 let field = document.querySelector('.field');
-let fieldTags = document.querySelector('.field__tags')
+let fieldTags = document.querySelector('.input-field__tags')
 
 fieldInput.onclick = function(){
     if(!fieldInput.classList.contains('on')){
@@ -20,7 +20,7 @@ fieldInput.onclick = function(){
 
         fieldInput.addEventListener('keydown', function(evt){
             if(evt.keyCode===32) {
-                let tag = document.createElement('span');
+                let tag = document.createElement('div');
                 tag.className = 'tag';
                 fieldTags.appendChild(tag);
                 tag.textContent = fieldInput.value;
