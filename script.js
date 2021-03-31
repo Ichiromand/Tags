@@ -1,6 +1,7 @@
 let list = document.querySelector('.list');
 let fieldInput = document.querySelector('.field__input');
 let field = document.querySelector('.field');
+let fieldTags = document.querySelector('.field__tags')
 
 fieldInput.onclick = function(){
     if(!fieldInput.classList.contains('on')){
@@ -15,7 +16,17 @@ fieldInput.onclick = function(){
         buttonAdd.className = 'field__buttons--add';
         buttons.appendChild(buttonAdd);
         buttonAdd.textContent = 'Добавить';
-        fieldInput.classList.add('on')
+        fieldInput.classList.add('on');
+
+        fieldInput.addEventListener('keydown', function(evt){
+            if(evt.keyCode===32) {
+                let tag = document.createElement('span');
+                tag.className = 'tag';
+                fieldTags.appendChild(tag);
+                tag.textContent = fieldInput.value;
+                fieldInput.value = '';
+            }
+        })
         
         buttonAdd.addEventListener('click', function(){
             if(fieldInput.value !== ''){
