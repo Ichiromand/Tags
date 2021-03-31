@@ -13,7 +13,6 @@ body {
     background-color: white;
     border-radius: 4px;
     padding-top: 15px;
-    padding-left: 40px;
 }
 
 .input-field__input {
@@ -92,6 +91,7 @@ body {
 
 .input-field {
     display: flex;
+    margin-left: 40px;
 }
 
 .input-field__tags {
