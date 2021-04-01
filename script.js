@@ -30,10 +30,9 @@ fieldInput.onclick = function(){
                 let listTag = document.createElement('li');
                 listTag.className = 'list__tag';
                 list.appendChild(listTag);
-                listTag.textContent = tag.textContent;
-                fieldTags.classList.remove('tags-input');
-                fieldTags.innerHTML = '';
             }
+            fieldTags.classList.remove('tags-input');
+            fieldTags.innerHTML = '';
         })
         
         buttonCancel.addEventListener('click', function(){
