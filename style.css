@@ -84,8 +84,10 @@ body {
     background-color:  #F1F1F1;
     border-radius: 4px;
     padding: 5px 10px;
-    margin-right: 20px;
+    margin-left: 20px;
     align-self: center;
+    font-size: 13px;
+    line-height: 18px;
 }
 
 .input-field {
@@ -97,5 +99,5 @@ body {
 }
 
 .tags-input {
-    margin-left: 40px;
+    margin-left: 20px;
 }
