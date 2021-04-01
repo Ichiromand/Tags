@@ -26,6 +26,23 @@ fieldInput.onclick = function(){
                 tag.textContent = fieldInput.value;
                 fieldInput.value = '';
                 fieldTags.classList.add('tags-input')
+                
+                fieldInput.addEventListener('keydown', function(evt){
+                    if(evt.keyCode===8) {
+                        if(fieldInput.value === ''){
+                            let lastTag = fieldTags.lastChild
+                            lastTag.remove();
+                        }
+                    }
+                })
+
+                buttonCancel.addEventListener('click', function(){
+                    buttons.remove();
+                    fieldInput.value = '';
+                    fieldInput.classList.remove('on');
+                    tag.remove();
+                    fieldTags.classList.remove('tags-input')
+                })
             }
         })
         
@@ -42,7 +59,7 @@ fieldInput.onclick = function(){
         buttonCancel.addEventListener('click', function(){
             buttons.remove();
             fieldInput.value = '';
-            fieldInput.classList.remove('on')
+            fieldInput.classList.remove('on');
         })
     }
 }
