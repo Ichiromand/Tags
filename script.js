@@ -23,14 +23,20 @@ fieldInput.onclick = function(){
                 let listTag = document.createElement('li');
                 listTag.className = 'list__tag';
                 list.appendChild(listTag);
-                listTag.textContent = fieldInput.value;
+                let tagIn = document.createElement('span');
+                tagIn.className = 'tag-in';
+                listTag.appendChild(tagIn);
+                tagIn.textContent = fieldInput.value;
                 fieldInput.value = '';
             } 
             for (tag of fieldTags.children) {
                 let listTag = document.createElement('li');
                 listTag.className = 'list__tag';
                 list.appendChild(listTag);
-                listTag.textContent = tag.textContent;
+                let tagIn = document.createElement('span');
+                tagIn.className = 'tag-in';
+                listTag.appendChild(tagIn);
+                tagIn.textContent = tag.textContent;
             }
             fieldTags.classList.remove('tags-input');
             fieldTags.innerHTML = '';
