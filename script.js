@@ -26,14 +26,22 @@ fieldInput.onclick = function(){
                 listTag.textContent = fieldInput.value;
                 fieldInput.value = '';
             }
+            for (tag of fieldTags.children) {
+                let listTag = document.createElement('li');
+                listTag.className = 'list__tag';
+                list.appendChild(listTag);
+                listTag.textContent = tag.textContent;
+                fieldTags.classList.remove('tags-input');
+                fieldTags.innerHTML = '';
+            }
         })
         
         buttonCancel.addEventListener('click', function(){
             buttons.remove();
             fieldInput.value = '';
             fieldInput.classList.remove('on');
-            fieldTags.classList.remove('tags-input')
-            fieldTags.innerHTML = ''
+            fieldTags.classList.remove('tags-input');
+            fieldTags.innerHTML = '';
         })
     }
 }
