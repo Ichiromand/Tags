@@ -32,13 +32,15 @@ fieldInput.onclick = function(){
             buttons.remove();
             fieldInput.value = '';
             fieldInput.classList.remove('on');
+            fieldTags.classList.remove('tags-input')
+            fieldTags.innerHTML = ''
         })
     }
 }
 
-fieldInput.addEventListener('keydown', function(evt){
+fieldInput.addEventListener('keydown', function(evt, tag){
     if(evt.keyCode===32) {
-        let tag = document.createElement('div');
+        tag = document.createElement('div');
         tag.className = 'tag';
         fieldTags.appendChild(tag);
         tag.textContent = fieldInput.value;
