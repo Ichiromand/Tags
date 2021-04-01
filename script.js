@@ -25,11 +25,12 @@ fieldInput.onclick = function(){
                 list.appendChild(listTag);
                 listTag.textContent = fieldInput.value;
                 fieldInput.value = '';
-            }
+            } 
             for (tag of fieldTags.children) {
                 let listTag = document.createElement('li');
                 listTag.className = 'list__tag';
                 list.appendChild(listTag);
+                listTag.textContent = tag.textContent;
             }
             fieldTags.classList.remove('tags-input');
             fieldTags.innerHTML = '';
@@ -45,9 +46,10 @@ fieldInput.onclick = function(){
     }
 }
 
-fieldInput.addEventListener('keydown', function(evt, tag){
+fieldInput.addEventListener('keydown', function(evt){
     if(evt.keyCode===32) {
-        tag = document.createElement('div');
+        evt.preventDefault()
+        let tag = document.createElement('div');
         tag.className = 'tag';
         fieldTags.appendChild(tag);
         tag.textContent = fieldInput.value;
