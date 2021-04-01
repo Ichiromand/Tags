@@ -17,34 +17,6 @@ fieldInput.onclick = function(){
         buttons.appendChild(buttonAdd);
         buttonAdd.textContent = 'Добавить';
         fieldInput.classList.add('on');
-
-        fieldInput.addEventListener('keydown', function(evt){
-            if(evt.keyCode===32) {
-                let tag = document.createElement('div');
-                tag.className = 'tag';
-                fieldTags.appendChild(tag);
-                tag.textContent = fieldInput.value;
-                fieldInput.value = '';
-                fieldTags.classList.add('tags-input')
-                
-                fieldInput.addEventListener('keydown', function(evt){
-                    if(evt.keyCode===8) {
-                        if(fieldInput.value === ''){
-                            let lastTag = fieldTags.lastChild
-                            lastTag.remove();
-                        }
-                    }
-                })
-
-                buttonCancel.addEventListener('click', function(){
-                    buttons.remove();
-                    fieldInput.value = '';
-                    fieldInput.classList.remove('on');
-                    tag.remove();
-                    fieldTags.classList.remove('tags-input')
-                })
-            }
-        })
         
         buttonAdd.addEventListener('click', function(){
             if(fieldInput.value !== ''){
@@ -63,3 +35,23 @@ fieldInput.onclick = function(){
         })
     }
 }
+
+fieldInput.addEventListener('keydown', function(evt){
+    if(evt.keyCode===32) {
+        let tag = document.createElement('div');
+        tag.className = 'tag';
+        fieldTags.appendChild(tag);
+        tag.textContent = fieldInput.value;
+        fieldInput.value = '';
+        fieldTags.classList.add('tags-input')
+    }
+})
+
+fieldInput.addEventListener('keydown', function(evt){
+    if(evt.keyCode===8) {
+        if(fieldInput.value === ''){
+            let lastTag = fieldTags.lastChild
+            lastTag.remove();
+        }
+    }
+})
