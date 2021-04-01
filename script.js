@@ -25,6 +25,7 @@ fieldInput.onclick = function(){
                 fieldTags.appendChild(tag);
                 tag.textContent = fieldInput.value;
                 fieldInput.value = '';
+                fieldTags.classList.add('tags-input')
             }
         })
         

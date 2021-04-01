@@ -91,10 +91,12 @@ body {
 
 .input-field {
     display: flex;
-    margin-left: 40px;
 }
 
 .input-field__tags {
     display: flex;
+}
 
+.tags-input {
+    margin-left: 40px;
 }
